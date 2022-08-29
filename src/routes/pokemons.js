@@ -51,7 +51,7 @@ router.get("/pokemons", async (req, res, next) => {
   }
   try {
     const apiPokemonsURLs = await axios
-      .get("https://pokeapi.co/api/v2/pokemon")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=2000")
       .then((d) => d.data.results);
 
     const apiPokemons = apiPokemonsURLs.map(async (p) => {
